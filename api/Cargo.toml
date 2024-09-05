@@ -1,0 +1,10 @@
+[package]
+name = "api"
+description = "Snark server-side apis for verifying snark proofs"
+version = "0.1.0"
+edition = "2021"
+licence = "MIT"
+authors = ["Iskander <0xisk@proton.me>"]
+
+[dependencies]
+actix-web = "4"
