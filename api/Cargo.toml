@@ -7,4 +7,5 @@ licence = "MIT"
 authors = ["Iskander <0xisk@proton.me>"]
 
 [dependencies]
-actix-web = "4"
+actix-web = { version = "4", features = ["openssl"] }
+openssl = { version = "0.10" }
