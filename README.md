@@ -1,3 +1,11 @@
+<p align="center">
+  <b>⚠️ Under Development</b>
+</p>
+
+<p align="center">
+  This project is currently under development and is <strong>not yet functional</strong>.
+</p>
+
 # openpassport-rs
 > PSE Hackathon 2024
 
@@ -8,10 +16,6 @@ A server-side Rust implementation for verifying zkSnark (Groth16) proofs using A
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fplus-icon%2Ffile-plus-font-awesome-svg-wikimedia-commons-10.png&f=1&nofb=1&ipt=501afa973a0fa3f1e19d1225703b8ea648f7086eab5c526d8c10fe3627b7bf21&ipo=images" alt="Rust Logo" width="70"/>
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.publishing.service.gov.uk%2Fgovernment%2Fuploads%2Fsystem%2Fuploads%2Fimage_data%2Ffile%2F104842%2Fepassport-GOVUK-960.png&f=1&nofb=1&ipt=02b39381b7e0538b3984bdaf3407d2b147e65f311e852aafa3a6ee784a77ae32&ipo=images" alt="OpenPassport Logo" width="100" l/>
 </p>
-
-## ⚠️ Under Development
-
-This project is currently under development and is **not yet functional**.
 
 ## Overview 
 This project aims to provide a robust solution for zkSnark proof verification using Rust. The project is structured into three main crates:
