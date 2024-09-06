@@ -20,6 +20,12 @@ This project aims to provide a robust solution for zkSnark proof verification us
 2. server: A server built with Actix-Web that exposes endpoints for initializing the verifier and verifying proofs.
 3. deno: A Deno crate that compiles TypeScript code, making it possible to run it within the Rust environment.
 
+## Development Status
+
+- The SDK is currently about 70% complete for the 1Step verification process.
+- The server is functional but still in development.
+- The Deno integration is in the experimental phase blocked by [openpassport/issues/190](https://github.com/zk-passport/openpassport/issues/190).
+
 ## Project Structure
 Here’s a visual representation of the folder hierarchy:
 
@@ -81,12 +87,6 @@ deno run --allow-read --allow-net src/openPassportVerifier.ts
   - Endpoint: `/verify`
   - Method: `POST`
   - Description: Verifies the passport proof.
-
-## Development Status
-
-- The SDK is currently about 70% complete for the 1Step verification process.
-- The server is functional but still in development.
-- The Deno integration is in the experimental phase.
 
 ## License
 
