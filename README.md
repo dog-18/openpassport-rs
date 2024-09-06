@@ -26,7 +26,8 @@ This project aims to provide a robust solution for zkSnark proof verification us
 - The SDK is currently about 70% complete for the 1Step verification process.
 - The server is functional but still in development.
 - The Deno integration is in the experimental phase blocked by [openpassport/issues/190](https://github.com/zk-passport/openpassport/issues/190).
-
+- The Wasm integration is in an early phase of development.
+  
 ## Project Structure
 Here’s a visual representation of the folder hierarchy:
 
