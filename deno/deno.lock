@@ -1,0 +1,17 @@
+{
+  "version": "3",
+  "redirects": {
+    "https://cdn.skypack.dev/@openpassport/sdk": "https://cdn.skypack.dev/new/@openpassport/sdk@v0.1.7/dist=es2019",
+    "https://cdn.skypack.dev/new/@openpassport/sdk@v0.1.7/dist=es2019": "https://cdn.skypack.dev/error/build:@openpassport/sdk@v0.1.7-6H0VEroHFQ2Vx0JT1NOd"
+  },
+  "remote": {
+    "https://cdn.skypack.dev/error/build:@openpassport/sdk@v0.1.7-6H0VEroHFQ2Vx0JT1NOd": "23d11e7f97344297a9e8b7f1c167033c13469e3452de9900b406ae567075346f"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@openpassport/sdk@^0.1.7"
+      ]
+    }
+  }
+}

@@ -1,27 +1,61 @@
-use std::path::PathBuf;
+use std::{
+    error::Error,
+    path::{Path, PathBuf},
+};
 
 use deno_runtime::{
-    deno_core::{resolve_path, serde_json, JsRuntime, RuntimeOptions},
-    deno_napi::v8::{HandleScope, Local, Value},
+    deno_core::{resolve_path, resolve_url_or_path, serde_json, JsRuntime, RuntimeOptions},
+    deno_napi::v8::Value,
 };
+use log::{error, info};
 
 pub async fn initialize_verifier(
     scope: String,
     attestation_id: Option<String>,
-    requirements: Vec<(String, String)>,
+    requirements: Option<Vec<(String, String)>>,
     rpc_url: Option<String>,
     dev_mode: bool,
 ) -> Result<(), Box<dyn std::error::Error>> {
+    // Log the start of the function
+    println!("Starting the initialize_verifier function");
+    println!("Starting the initialize_verifier function");
+
     let mut js_runtime = JsRuntime::new(RuntimeOptions::default());
 
-    let path = PathBuf::from("./initializeVerifier.ts");
-    let module_specifier = resolve_path(&*path.to_string_lossy(), &path)?;
+    let module_specifier = resolve_url_or_path(
+            "/home/isk/projects/pse/hackathon_2024/snark-verifier-server-rs/deno/src/openPassportVerifier.ts",
+            Path::new("/")
+        ).map_err(|e| {
+            println!("Error resolving module specifier: {:?}", e);
+            e
+        })?;
 
-    js_runtime.load_main_es_module(&module_specifier).await?;
+    // Log the module specifier used
+    println!("Module specifier resolved: {:?}", module_specifier);
 
-    let requirements_json = serde_json::to_string(&requirements)?;
-    let attestation_id = attestation_id.unwrap_or_else(|| "default_attestation_id".to_string());
-    let rpc_url = rpc_url.unwrap_or_else(|| "https://example.com/rpc".to_string());
+    js_runtime
+        .load_main_es_module(&module_specifier)
+        .await
+        .map_err(|e| {
+            println!("Error load main es modules failed: {:?}", e);
+            e
+        })?;
+
+    //let requirements_json = serde_json::to_string(&requirements)?;
+    let attestation_id = attestation_id.unwrap_or_else(|| {
+        println!("Attestation ID not provided, using default");
+        "default_attestation_id".to_string()
+    });
+    let rpc_url = rpc_url.unwrap_or_else(|| {
+        println!("RPC URL not provided, using default");
+        "https://example.com/rpc".to_string()
+    });
+
+    // Log the initialization parameters
+    println!(
+        "Initializing verifier with scope: {}, attestationId: {}, rpcUrl: {}, dev_mode: {}",
+        scope, attestation_id, rpc_url, dev_mode
+    );
 
     let init_script = format!(
         r#"
@@ -33,10 +67,20 @@ pub async fn initialize_verifier(
             dev_mode: {}
         }});
     "#,
-        scope, attestation_id, requirements_json, rpc_url, dev_mode
+        scope, attestation_id, "None", rpc_url, dev_mode
     );
 
-    js_runtime.execute_script("<anon>", init_script)?;
+    // Log the script before execution
+    println!("Executing script: {}", init_script);
+
+    if let Err(e) = js_runtime.execute_script("<anon>", init_script) {
+        // Log the error if script execution fails
+        error!("Script execution failed: {}", e);
+        return Err(Box::<dyn Error>::from(e));
+    }
+
+    // Log the success of the function
+    println!("Verifier initialized successfully");
 
     Ok(())
 }

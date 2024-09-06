@@ -8,4 +8,7 @@ authors = ["Iskander <0xisk@proton.me>"]
 
 [dependencies]
 actix-web = { version = "4", features = ["openssl"] }
+actix-cors = "0.7"
 openssl = { version = "0.10" }
+deno = { path = "../deno" }
+serde = { version = "1.0.188", features = ["derive"] }
