@@ -5,7 +5,7 @@ A server-side Rust implementation for verifying zkSnark (Groth16) proofs using A
 
 <p align="center">
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fchinese.freecodecamp.org%2Fnews%2Fcontent%2Fimages%2F2021%2F02%2Frust-mascot.png&f=1&nofb=1&ipt=bff8f5f9c865cfc967823081b6262b939c47a90625b091dff9621c985ea071f4&ipo=images" alt="Rust Logo" width="100"/>
-  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fplus-icon%2Ffile-plus-font-awesome-svg-wikimedia-commons-10.png&f=1&nofb=1&ipt=501afa973a0fa3f1e19d1225703b8ea648f7086eab5c526d8c10fe3627b7bf21&ipo=images" alt="Rust Logo" width="100"/>
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fplus-icon%2Ffile-plus-font-awesome-svg-wikimedia-commons-10.png&f=1&nofb=1&ipt=501afa973a0fa3f1e19d1225703b8ea648f7086eab5c526d8c10fe3627b7bf21&ipo=images" alt="Rust Logo" width="70"/>
   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fassets.publishing.service.gov.uk%2Fgovernment%2Fuploads%2Fsystem%2Fuploads%2Fimage_data%2Ffile%2F104842%2Fepassport-GOVUK-960.png&f=1&nofb=1&ipt=02b39381b7e0538b3984bdaf3407d2b147e65f311e852aafa3a6ee784a77ae32&ipo=images" alt="OpenPassport Logo" width="100" l/>
 </p>
 
