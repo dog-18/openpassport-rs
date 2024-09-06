@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "lib": ["deno.ns", "dom"]
+    },
+    "tasks": {
+      "install": "npm install @openpassport/sdk"
+    }
+  }
+  

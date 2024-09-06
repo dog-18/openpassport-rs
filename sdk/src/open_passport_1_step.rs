@@ -1,7 +1,6 @@
 use std::str::FromStr;
 use openssl::x509::X509;
 use ark_bn254::Bn254;
-use ark_circom::CircomBuilder;
 use ark_ec::pairing::Pairing;
 use ark_groth16::{verifier, Groth16, Proof};
 use num_bigint::BigInt;
