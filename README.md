@@ -44,26 +44,26 @@ Here’s a visual representation of the folder hierarchy:
 ### Prerequisites: 
 To get started with this project:
 
-1. Clone the repository:
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/yourusername/openpassport-rs.git
 cd openpassport-rs
 ```
 
-2. Set up the SDK:
+**2. Set up the SDK:**
 ```bash
 cd sdk
 cargo build
 ```
 
-3. Run the Server:
+**3. Run the Server:**
 Navigate to the server directory and run the Actix-Web server:
 ```bash
 cd ../server
 cargo run
 ```
 
-4. Set up Deno:
+**4. Set up Deno:**
 Navigate to the deno directory and make sure Deno is installed. Run the Deno scripts:
 ```bash
 cd ../deno
@@ -71,7 +71,7 @@ deno run --allow-read --allow-net src/openPassportVerifier.ts
 ```
 > Note: The crate is currently blocked due to an issue with the `@openpassport/sdk` TS package. You can follow the progress or contribute to the discussion in [openpassport/issues/190](https://github.com/zk-passport/openpassport/issues/190)
 
-5. API Endpoints
+**5. API Endpoints**
 - Initialize Verifier:
     - Endpoint: `/initialize`
     - Method: `POST`
