@@ -38,6 +38,9 @@ Here’s a visual representation of the folder hierarchy:
 ├── api
 │   ├── Cargo.toml
 │   └── src
+├── wasm
+│   ├── Cargo.toml
+│   └── src
 ├── deno
 │   ├── Cargo.toml
 │   └── src

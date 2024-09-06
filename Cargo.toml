@@ -2,4 +2,4 @@
 members = [
     "api", "deno",
     "sdk"
-]
+, "wasm"]
