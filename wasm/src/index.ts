@@ -1,0 +1,1 @@
+export { initializeVerifier, verifyPassport } from './openPassportVerifier';

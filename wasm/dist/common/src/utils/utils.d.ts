@@ -1,0 +1,52 @@
+import { LeanIMT } from '@zk-kit/lean-imt';
+import { SMT } from '@ashpect/smt';
+export declare function formatMrz(mrz: string): number[];
+export declare function parsePubKeyString(pubKeyString: string): {
+    modulus: string;
+    exponent: string;
+};
+export declare function formatAndConcatenateDataHashes(dataHashes: [number, number[]][], hashLen: number, dg1HashOffset: number): number[];
+export declare function assembleEContent(messageDigest: number[]): any[];
+export declare function toUnsigned(byte: number): number;
+export declare function arraysAreEqual(array1: number[], array2: number[]): boolean;
+export declare function toSigned(byte: number): number;
+export declare const toBinaryString: (byte: any) => string;
+export declare function splitToWords(number: bigint, wordsize: bigint, numberElement: bigint): string[];
+export declare function bytesToBigDecimal(arr: number[]): string;
+export declare function hexToDecimal(hex: string): string;
+export declare function hash(signatureAlgorithm: string, bytesArray: number[]): number[];
+export declare function hexToSignedBytes(hexString: string): number[];
+export declare function toUnsignedByte(signedByte: number): number;
+export declare function formatSigAlgNameForCircuit(sigAlg: string, exponent?: string): string;
+export declare function bigIntToChunkedBytes(num: BigInt | bigint, bytesPerChunk: number, numChunks: number): string[];
+export declare function hexStringToSignedIntArray(hexString: string): any[];
+export declare function formatRoot(root: string): string;
+export declare function getCurrentDateYYMMDD(dayDiff?: number): number[];
+export declare function getHashLen(signatureAlgorithm: string): 64 | 48 | 32 | 20;
+export declare function packBytes(unpacked: any): bigint[];
+export declare function generateSMTProof(smt: SMT, leaf: bigint): {
+    root: import("@ashpect/smt").Node;
+    depth: number;
+    closestleaf: any;
+    siblings: import("@ashpect/smt").Siblings;
+};
+export declare function generateMerkleProof(imt: LeanIMT, _index: number, maxDepth: number): {
+    merkleProofSiblings: bigint[];
+    merkleProofIndices: number[];
+    depthForThisOne: number;
+};
+export declare function findSubarrayIndex(arr: any[], subarray: any[]): number;
+export declare function extractRSFromSignature(signatureBytes: number[]): {
+    r: string;
+    s: string;
+};
+export declare function BigintToArray(n: number, k: number, x: bigint): bigint[];
+export declare function castFromUUID(uuid: string): string;
+export declare function bigIntToHex(bigInt: bigint): string;
+export declare function hexToUUID(hex: string): string;
+export declare function castToUUID(bigInt: bigint): string;
+export declare function castFromScope(scope: string): string;
+export declare function castToScope(num: bigint): string;
+export declare function stringToAsciiBigIntArray(str: string): bigint[];
+export declare function hexToBin(n: string): string;
+export declare function num2Bits(n: number, inValue: bigint): bigint[];
