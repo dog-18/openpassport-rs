@@ -18,7 +18,7 @@ This project aims to provide a robust solution for zkSnark proof verification us
 
 1. `openpassport-rs/sdk`: A Rust adaptation of the `@openpassport/sdk` library. Approximately 70% of the 1Step verification logic has been implemented.
 2. `openpassport-rs/server`: A server built with Actix-Web that exposes endpoints for initializing the verifier and verifying proofs.
-3. `openpassport-rs/deno`: A Deno crate that compiles TypeScript code, making it possible to run it within the Rust environment.
+3. `openpassport-rs/deno`: A [Deno](https://deno.com/) crate that compiles TypeScript code, making it possible to run it within the Rust environment.
 3. `openpassport-rs/wasm`: A Wasm crate that compiles TypeScript code into  [AssemblyScript](https://www.assemblyscript.org/), making it possible to run it within the Rust environment. (That is in early development, just started on it some hours before the submission of the hackathon)
 
 ## Development Status
