@@ -69,6 +69,7 @@ Navigate to the deno directory and make sure Deno is installed. Run the Deno scr
 cd ../deno
 deno run --allow-read --allow-net src/openPassportVerifier.ts
 ```
+> Note: The crate is currently blocked due to an issue with the `@openpassport/sdk` TS package. You can follow the progress or contribute to the discussion in [openpassport/issues/190](https://github.com/zk-passport/openpassport/issues/190)
 
 5. API Endpoints
 - Initialize Verifier:

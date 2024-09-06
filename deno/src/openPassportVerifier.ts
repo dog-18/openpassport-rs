@@ -1,4 +1,4 @@
-import { OpenPassport1StepInputs, OpenPassportVerifierReport, OpenPassport1StepVerifier } from 'npm:@openpassport/sdk@^0.1.7';
+import { OpenPassport1StepInputs, OpenPassportVerifierReport, OpenPassport1StepVerifier } from '../node_modules/@openpassport/sdk/dist/sdk/src';
 
 let verifier: OpenPassport1StepVerifier | null = null;
 
